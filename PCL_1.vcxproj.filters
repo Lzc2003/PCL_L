@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="octree_change_detection.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
