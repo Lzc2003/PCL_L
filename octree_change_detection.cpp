@@ -4,7 +4,6 @@
 #include <vector>
 #include <ctime>
 
-using namespace pcl;
 
 int main(int argc, char** argv)
 {
@@ -14,10 +13,10 @@ int main(int argc, char** argv)
 	float resolution = 16.0f;
 
 	// 1、初始化空间变化检测对象
-	octree::OctreePointCloudChangeDetector<PointXYZ>octree(resolution);
+	pcl::octree::OctreePointCloudChangeDetector<pcl::PointXYZ>octree(resolution);
 
 	// 2、为cloudA创建点云 ，添加点云到八叉树，建立八叉树
-	PointCloud<PointXYZ>::Ptr cloudA(new PointCloud<PointXYZ>);
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloudA(new pcl::PointCloud<pcl::PointXYZ>);
 	cloudA->width = 128;
 	cloudA->height = 1;
 	cloudA->points.resize(cloudA->width * cloudA->height);
@@ -34,7 +33,7 @@ int main(int argc, char** argv)
 	octree.switchBuffers();
 
 	// 4、为cloudB创建点云，添加 cloudB到八叉树
-	PointCloud<PointXYZ>::Ptr cloudB(new PointCloud<PointXYZ>);
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloudB(new pcl::PointCloud<pcl::PointXYZ>);
 	cloudB->width = 128;
 	cloudB->height = 1;
 	cloudB->points.resize(cloudB->width * cloudB->height);
