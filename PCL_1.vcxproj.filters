@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="octree_change_detection.cpp">
+    <ClCompile Include="voxel_grid.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
